@@ -85,7 +85,7 @@
     cursor: pointer;
 }
 
-.square:hover{
+.square:active{
     background: hsl(209, 84%, 60%);
     transform: scale(1.02)
 }

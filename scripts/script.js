@@ -52,7 +52,7 @@ const Gamecontroller = (() =>{
                 DisplayController.displayWinner(isWinning())
                 setTimeout(resetGameboard, 2000)
             }else if(isTie()){
-                resetGameboard()
+                setTimeout(resetGameboard, 2000)
             }
             changeTurn()
         }
