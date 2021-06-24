@@ -1,5 +1,8 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
+:root{
+--background-color: hsl(96, 38%, 95%);
+--square-color: hsl(209, 84%, 81%);
 }
 
 *{
@@ -14,7 +17,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #0000ffaa
+    background: var(--background-color);
+    color: hsl(209, 84%, 20%);
 }
 
 .main >*{
@@ -32,8 +36,10 @@
 }
 
 .score-x, .score-o{
+    background: hsl(96, 38%, 85%);
     display: flex;
     border: 1px solid gray;
+    border-radius: 5px;
     
 }
 
@@ -64,21 +70,23 @@
     grid-template-rows: repeat(3,1fr);
     gap: 5px;
     background-color: black;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .square{
-    background-color: white;
+    background-color: var(--square-color);
     border-radius: 5px;
     display: grid;
     place-items: center;
     font-size: 4rem;
+    font-family: 'Dela Gothic One', serif;
+    color: hsl(209, 84%, 20%);
     transition: .2s;
     cursor: pointer;
 }
 
 .square:hover{
-    background: gray;
+    background: hsl(209, 84%, 60%);
     transform: scale(1.02)
 }
 
