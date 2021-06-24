@@ -2,7 +2,7 @@
 
 :root{
 --background-color: hsl(96, 38%, 95%);
---square-color: hsl(209, 84%, 81%);
+--square-color: hsl(96, 38%, 55%);
 }
 
 *{
@@ -18,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     background: var(--background-color);
-    color: hsl(209, 84%, 20%);
+    color: hsl(96, 38%, 25%);
 }
 
 .main >*{
@@ -36,7 +36,7 @@
 }
 
 .score-x, .score-o{
-    background: hsl(96, 38%, 85%);
+    background: hsl(96, 38%, 80%);
     display: flex;
     border: 1px solid gray;
     border-radius: 5px;
@@ -80,13 +80,12 @@
     place-items: center;
     font-size: 4rem;
     font-family: 'Dela Gothic One', serif;
-    color: hsl(209, 84%, 20%);
     transition: .2s;
     cursor: pointer;
 }
 
 .square:active{
-    background: hsl(209, 84%, 60%);
+    background: hsl(96, 38%, 15%);
     transform: scale(1.02)
 }
 
