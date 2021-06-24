@@ -8,13 +8,6 @@
     box-sizing: border-box;
 }
 
-body{
-   
-}
-div{
-    border:1px solid;
-}
-
 .main{
     width: 100vw;
     height: 100vh;
@@ -37,8 +30,11 @@ div{
     display: flex;
     justify-content: space-around;
 }
+
 .score-x, .score-o{
     display: flex;
+    border: 1px solid gray;
+    
 }
 
 .x, .o{
@@ -47,11 +43,17 @@ div{
     display: grid;
     place-items: center;
     font-size: 2rem;
+    border-right: 1px solid;
+    
 }
 
 .x-score, .o-score{
     width:60px;
     height: 40px;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+
 }
 
 .game-container{
@@ -62,6 +64,7 @@ div{
     grid-template-rows: repeat(3,1fr);
     gap: 5px;
     background-color: black;
+    border-radius: 5px;
 }
 
 .square{
@@ -70,6 +73,13 @@ div{
     display: grid;
     place-items: center;
     font-size: 4rem;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.square:hover{
+    background: gray;
+    transform: scale(1.02)
 }
 
 @media (max-width: 550px){
