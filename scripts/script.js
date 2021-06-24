@@ -49,7 +49,8 @@ const Gamecontroller = (() =>{
             appendSymbol(target.dataset.index, playerOfTurn.symbol)
             if(isWinning()){
                 setScore()
-                resetGameboard()
+                DisplayController.displayWinner(isWinning())
+                setTimeout(resetGameboard, 2000)
             }else if(isTie()){
                 resetGameboard()
             }
@@ -80,10 +81,21 @@ const DisplayController = (() => {
         scoreO.innerText = o;
     }
 
+    const displayWinner = (winningCombination) => {
+        for ( i of winningCombination){
+            squares[i].classList.add('highlight')
+        }
+        setTimeout( () => {
+            for ( i of winningCombination){ 
+                squares[i].classList.remove('highlight')
+            }
+        }, 2000)
+    }
+
     const cleanBoard = () => squares.forEach(x => x.textContent = '')
 
 
-    return { displayBoard, displayScore, cleanBoard }
+    return { displayBoard, displayScore, cleanBoard, displayWinner }
 }
 )()
 

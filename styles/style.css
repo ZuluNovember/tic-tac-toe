@@ -82,6 +82,10 @@
     transform: scale(1.02)
 }
 
+.highlight{
+    background: greenyellow;
+}
+
 @media (max-width: 550px){
     .game-container{
         width:90vmin;
